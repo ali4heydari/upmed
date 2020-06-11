@@ -30,16 +30,16 @@ module.exports = {
     },
     `gatsby-plugin-sass`,
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ['PT Serif'],
+          families: ["PT Serif"],
         },
         custom: {
-          families: ['Inter'],
-          urls: ['/fonts/fonts.css']
-        }
-      }
+          families: ["Behdad"],
+          urls: ["/fonts/fonts.css"],
+        },
+      },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
