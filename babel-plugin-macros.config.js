@@ -1,9 +1,9 @@
 module.exports = {
   twin: {
-    config: './tailwind.config.js',
-    preset: 'styled-components',
+    config: "./tailwind.config.js",
+    preset: "styled-components",
     autoCssProp: false,
     hasSuggestions: true,
-    debug: true,
+    debug: process.env.NODE_ENV !== "production",
   },
 }
