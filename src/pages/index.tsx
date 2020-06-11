@@ -10,6 +10,7 @@ import thumbnailNews from "../../static/images/feature-news.png"
 import thumbnailTeams from "../../static/images/feature-team.png"
 import thumbnailStaff from "../../static/images/feature-user.png"
 import { useTranslation } from "react-i18next"
+import { StringKeys } from "../utils/enums"
 
 const IndexPage = () => {
   const { t, i18n } = useTranslation()
@@ -41,7 +42,11 @@ const IndexPage = () => {
 
               <div className={"col-6"}>
                 <div className={"feature__content"}>
-                  <h2>افزایش کیفیت و بهبود شهرت خدمات تیم درمان</h2>
+                  <h2>
+                    {t(
+                      StringKeys.ABILITY_TO_MEASURE_THE_OUTPUT_OF_TREATMENT_AND_PATIENT_SATISFACTION_IN_QUANTITATIVE_AND_STATISTICAL_TERMS
+                    )}
+                  </h2>
                   <p>
                     Save your time and energy by letting HiStaff to manage your
                     events (handle the colleague’s birthday, gathering, etc.)
@@ -56,8 +61,9 @@ const IndexPage = () => {
               <div className={"col-6"}>
                 <div className={"feature__content"}>
                   <h2>
-                    ارتباط وسیع‌تر با بیمار در عین حال صرفه‌جویی در وقت تیم
-                    درمان
+                    {t(
+                      StringKeys.ACCESS_TO_ANALYTICAL_DASHBOARDS_AND_DATA_TO_MEASURE_THE_QUALITY_OF_TREATMENT_AND_THE_PERFORMANCE_OF_THE_TREATMENT_TEAM
+                    )}
                   </h2>
                   <p>
                     Let the staff write down on the board freely,
@@ -87,8 +93,9 @@ const IndexPage = () => {
               <div className={"col-6"}>
                 <div className={"feature__content"}>
                   <h2>
-                    شناسایی و رفع سریع مشکلاتی که ممکن است پس از درمان برای
-                    بیمار به جود بیاید
+                    {t(
+                      StringKeys.BETTER_UNDERSTAND_YOUR_SITUATION_AND_GET_THE_NECESSARY_INFORMATION_AND_KNOWLEDGE_ABOUT_THE_DISEASE_AND_TREATMENT
+                    )}
                   </h2>
                   <p>
                     Get rid of sending news by e-mail and its problems; post the
@@ -105,7 +112,9 @@ const IndexPage = () => {
               <div className={"col-6"}>
                 <div className={"feature__content"}>
                   <h2>
-                    دسترسی ساده‌تر به اطلاعات و پیشینه‌ی بیمار در صورت نیاز
+                    {t(
+                      StringKeys.EARLY_DETECTION_OF_PROBLEMS_AND_PREVENTION_OF_POSSIBLE_LOSSES_AND_PENALTIES
+                    )}
                   </h2>
                   <p>
                     HiStaff let you add staff in specific teams and manage them
@@ -132,7 +141,11 @@ const IndexPage = () => {
 
               <div className={"col-6"}>
                 <div className={"feature__content"}>
-                  <h2>بهبود کیفیت درمان و کاهش طول درمان</h2>
+                  <h2>
+                    {t(
+                      StringKeys.EASIER_ACCESS_TO_THE_PATIENTS_INFORMATION_AND_BACKGROUND_IF_NEEDED
+                    )}
+                  </h2>
                   <p>
                     Discard traditional ways to archive staff documents and
                     information, and try new ways to store and archive them in
@@ -147,7 +160,11 @@ const IndexPage = () => {
             <div className={"row"}>
               <div className={"col-6"}>
                 <div className={"feature__content"}>
-                  <h2>افزایش کیفیت درمان و کاهش هزینه‌های بیمه</h2>
+                  <h2>
+                    {t(
+                      StringKeys.IDENTIFY_AND_RESOLVE_PROBLEMS_QUICKLY_THAT_MAY_ARISE_FOR_THE_PATIENT_AFTER_TREATMENT
+                    )}
+                  </h2>
                   <p>
                     HiStaff let you add staff in specific teams and manage them
                     easily.
@@ -162,6 +179,35 @@ const IndexPage = () => {
               </div>
             </div>
           </div>
+
+
+          <div className={"feature__item"}>
+            <div className={"row"}>
+              <div className={"col-6 first"}>
+                <div className={"thumbnail"}>
+                  <img alt={"Users"} src={thumbnailStaff} />
+                </div>
+              </div>
+
+              <div className={"col-6"}>
+                <div className={"feature__content"}>
+                  <h2>
+                    {t(
+                      StringKeys.IMPROVING_THE_QUALITY_OF_TREATMENT_AND_REDUCING_THE_DURATION_OF_TREATMENT
+                    )}
+                  </h2>
+                  <p>
+                    Discard traditional ways to archive staff documents and
+                    information, and try new ways to store and archive them in
+                    HiStaff easily.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
         </div>
       </div>
 
