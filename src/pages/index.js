@@ -1,4 +1,5 @@
 import React from "react"
+import 'twin.macro'
 
 import Layout from "../components/layout"
 import SEO from "../components/seo"
@@ -12,7 +13,17 @@ import thumbnailStaff from "../../static/images/feature-user.png"
 const IndexPage = () => (
     <Layout>
         <SEO title="Make your Staff and Workspace Happy"/>
-
+        <div tw="md:flex bg-white rounded-lg p-6">
+            <img tw="h-16 w-16 rounded-full mx-auto" src="avatar.jpg"/>
+             <div tw="text-center">
+                 <h2 tw="text-lg">Erin Lindford</h2>
+             <div tw="text-purple-500">Customer Support</div>
+             <div tw="text-gray-600">erinlindford@example.com</div>
+             <div tw="text-gray-600">(555) 765-4321</div>
+             </div>
+            </div>
+        <button tw="text-lg px-8 py-2 rounded">Success</button>
+        <input tw="border hover:border-black" />
         <div className={"page-header home"}>
             <h1>Make your Staff and Workspace Happy</h1>
             <p>HiStaff gives your complex the opportunity to increase the percentage of happiness<br/>and enjoyment of your staff and as a result, bring productivity to your workspace.</p>
