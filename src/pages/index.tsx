@@ -17,7 +17,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      {/*<SEO title="Make your Staff and Workspace Happy" />*/}
+      <SEO title="Make your Staff and Workspace Happy" />
       <div className={"page-header home"}>
         <h1>{t("hi")}</h1>
         <p>
@@ -42,14 +42,11 @@ const IndexPage = () => {
 
               <div className={"col-6"}>
                 <div className={"feature__content"}>
-                  <h2>
+                  <h2>{t(StringKeys.MEASUREMENT_OF_TREATMENT_OUTPUT)}</h2>
+                  <p>
                     {t(
                       StringKeys.ABILITY_TO_MEASURE_THE_OUTPUT_OF_TREATMENT_AND_PATIENT_SATISFACTION_IN_QUANTITATIVE_AND_STATISTICAL_TERMS
                     )}
-                  </h2>
-                  <p>
-                    Save your time and energy by letting HiStaff to manage your
-                    events (handle the colleague’s birthday, gathering, etc.)
                   </p>
                 </div>
               </div>
@@ -60,16 +57,11 @@ const IndexPage = () => {
             <div className={"row"}>
               <div className={"col-6"}>
                 <div className={"feature__content"}>
-                  <h2>
+                  <h2>{t(StringKeys.ANALYTICAL_DASHBOARDS)}</h2>
+                  <p>
                     {t(
                       StringKeys.ACCESS_TO_ANALYTICAL_DASHBOARDS_AND_DATA_TO_MEASURE_THE_QUALITY_OF_TREATMENT_AND_THE_PERFORMANCE_OF_THE_TREATMENT_TEAM
                     )}
-                  </h2>
-                  <p>
-                    Let the staff write down on the board freely,
-                    <br />
-                    Joking with each other and writing cool content can make the
-                    workplace more diverse and attractive for employees.{" "}
                   </p>
                 </div>
               </div>
@@ -92,15 +84,11 @@ const IndexPage = () => {
 
               <div className={"col-6"}>
                 <div className={"feature__content"}>
-                  <h2>
+                  <h2>{t(StringKeys.BETTER_UNDERSTAND_YOUR_SITUATION)}</h2>
+                  <p>
                     {t(
                       StringKeys.BETTER_UNDERSTAND_YOUR_SITUATION_AND_GET_THE_NECESSARY_INFORMATION_AND_KNOWLEDGE_ABOUT_THE_DISEASE_AND_TREATMENT
                     )}
-                  </h2>
-                  <p>
-                    Get rid of sending news by e-mail and its problems; post the
-                    news in an internal and attractive format via HiStaff
-                    instead.
                   </p>
                 </div>
               </div>
@@ -111,14 +99,11 @@ const IndexPage = () => {
             <div className={"row"}>
               <div className={"col-6"}>
                 <div className={"feature__content"}>
-                  <h2>
+                  <h2>{t(StringKeys.DETECTION_OF_PROBLEMS)}</h2>
+                  <p>
                     {t(
                       StringKeys.EARLY_DETECTION_OF_PROBLEMS_AND_PREVENTION_OF_POSSIBLE_LOSSES_AND_PENALTIES
                     )}
-                  </h2>
-                  <p>
-                    HiStaff let you add staff in specific teams and manage them
-                    easily.
                   </p>
                 </div>
               </div>
@@ -147,9 +132,9 @@ const IndexPage = () => {
                     )}
                   </h2>
                   <p>
-                    Discard traditional ways to archive staff documents and
-                    information, and try new ways to store and archive them in
-                    HiStaff easily.
+                    {t(
+                      StringKeys.EASIER_ACCESS_TO_THE_PATIENTS_INFORMATION_AND_BACKGROUND_IF_NEEDED
+                    )}
                   </p>
                 </div>
               </div>
@@ -160,14 +145,11 @@ const IndexPage = () => {
             <div className={"row"}>
               <div className={"col-6"}>
                 <div className={"feature__content"}>
-                  <h2>
+                  <h2>{t(StringKeys.IDENTIFY_PROBLEMS_AFTER_TREATMENT)}</h2>
+                  <p>
                     {t(
                       StringKeys.IDENTIFY_AND_RESOLVE_PROBLEMS_QUICKLY_THAT_MAY_ARISE_FOR_THE_PATIENT_AFTER_TREATMENT
                     )}
-                  </h2>
-                  <p>
-                    HiStaff let you add staff in specific teams and manage them
-                    easily.
                   </p>
                 </div>
               </div>
@@ -180,7 +162,6 @@ const IndexPage = () => {
             </div>
           </div>
 
-
           <div className={"feature__item"}>
             <div className={"row"}>
               <div className={"col-6 first"}>
@@ -191,23 +172,16 @@ const IndexPage = () => {
 
               <div className={"col-6"}>
                 <div className={"feature__content"}>
-                  <h2>
+                  <h2>{t(StringKeys.IMPROVING_THE_QUALITY_OF_TREATMENT)}</h2>
+                  <p>
                     {t(
                       StringKeys.IMPROVING_THE_QUALITY_OF_TREATMENT_AND_REDUCING_THE_DURATION_OF_TREATMENT
                     )}
-                  </h2>
-                  <p>
-                    Discard traditional ways to archive staff documents and
-                    information, and try new ways to store and archive them in
-                    HiStaff easily.
                   </p>
                 </div>
               </div>
             </div>
           </div>
-
-
-
         </div>
       </div>
 
@@ -223,7 +197,7 @@ const IndexPage = () => {
 
           <div className={"button"}>
             <a href="https://app.histaff.io" target={"_blank"}>
-              Get Started
+              {t(StringKeys.GET_STARTED)}
             </a>
           </div>
         </div>

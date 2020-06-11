@@ -9,4 +9,11 @@ export enum StringKeys {
   ABILITY_TO_MEASURE_THE_OUTPUT_OF_TREATMENT_AND_PATIENT_SATISFACTION_IN_QUANTITATIVE_AND_STATISTICAL_TERMS = "Ability to measure the output of treatment and patient satisfaction in quantitative and statistical terms",
   ACCESS_TO_ANALYTICAL_DASHBOARDS_AND_DATA_TO_MEASURE_THE_QUALITY_OF_TREATMENT_AND_THE_PERFORMANCE_OF_THE_TREATMENT_TEAM = "Access to analytical dashboards and data to measure the quality of treatment and the performance of the treatment team",
   EARLY_DETECTION_OF_PROBLEMS_AND_PREVENTION_OF_POSSIBLE_LOSSES_AND_PENALTIES = "Early detection of problems and prevention of possible losses and penalties",
+  GET_STARTED = "get_started",
+  MEASUREMENT_OF_TREATMENT_OUTPUT = "measurement_of_treatment_output",
+  ANALYTICAL_DASHBOARDS = "analytical_dashboards",
+  BETTER_UNDERSTAND_YOUR_SITUATION = "better_understand_your_situation",
+  DETECTION_OF_PROBLEMS = "detection_of_problems",
+  IDENTIFY_PROBLEMS_AFTER_TREATMENT = "identify_problems_after_treatment",
+  IMPROVING_THE_QUALITY_OF_TREATMENT = "improving_the_quality_of_treatment",
 }

@@ -2,6 +2,8 @@ import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import { useTranslation } from "react-i18next"
+import { Languages } from "../utils/enums"
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -17,13 +19,14 @@ function SEO({ description, lang, meta, title }) {
       }
     `
   )
-
+  const { i18n } = useTranslation()
   const metaDescription = description || site.siteMetadata.description
 
   return (
     <Helmet
       htmlAttributes={{
         lang,
+        dir: i18n.language === Languages.PERSIAN ? "rtl" : "ltr",
       }}
       title={title}
       titleTemplate={`%s | ${site.siteMetadata.title}`}
