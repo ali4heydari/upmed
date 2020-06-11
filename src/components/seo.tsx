@@ -25,7 +25,10 @@ function SEO({ description, lang, meta, title }) {
   return (
     <Helmet
       htmlAttributes={{
-        lang,
+        lang:
+          i18n.language === Languages.CI_MODE
+            ? Languages.ENGLISH
+            : i18n.language,
         dir: i18n.language === Languages.PERSIAN ? "rtl" : "ltr",
       }}
       title={title}

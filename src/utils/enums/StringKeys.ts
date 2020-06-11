@@ -16,4 +16,6 @@ export enum StringKeys {
   DETECTION_OF_PROBLEMS = "detection_of_problems",
   IDENTIFY_PROBLEMS_AFTER_TREATMENT = "identify_problems_after_treatment",
   IMPROVING_THE_QUALITY_OF_TREATMENT = "improving_the_quality_of_treatment",
+  COPYRIGHT = "copyright",
+  ALL_RIGHTS_RESERVED = "all_rights_reserved",
 }
