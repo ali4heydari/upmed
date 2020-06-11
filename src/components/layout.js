@@ -7,7 +7,8 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { graphql, Link, StaticQuery } from "gatsby"
+import { graphql, Link, useStaticQuery } from "gatsby"
+
 
 import Header from "./header"
 import "../../static/styles/main.scss"
@@ -18,16 +19,17 @@ import iconGitHub from "../../static/images/icon-github.svg"
 import iconInstagram from "../../static/images/icon-instagram.svg"
 import Theme from "./Theme"
 
-const Layout = ({ children }) => (
-  <StaticQuery query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+const Layout = ({ children }) => {
+  const data = useStaticQuery(graphql`
+      query HeaderQuery {
+          site {
+              siteMetadata {
+                  title
+              }
           }
-        }
       }
-    `} render={data => (
+  `)
+  return (
     <Theme>
       <Header siteTitle={data.site.siteMetadata.title} />
       <main>{children}</main>
@@ -100,8 +102,8 @@ const Layout = ({ children }) => (
         </div>
       </footer>
     </Theme>
-  )} />
-)
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired
