@@ -1,7 +1,8 @@
 {
   "include": [
     "./src/**/*",
-    "./twin.d.ts"
+    "./twin.d.ts",
+    "./custom.d.ts"
   ],
   "compilerOptions": {
     "target": "esnext",
