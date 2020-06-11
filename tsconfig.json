@@ -2,7 +2,7 @@
   "include": [
     "./src/**/*",
     "./twin.d.ts",
-    "./custom.d.ts"
+    "./global.d.ts"
   ],
   "compilerOptions": {
     "target": "esnext",
