@@ -7,6 +7,8 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -14,8 +16,6 @@ module.exports = {
         path: `${__dirname}/static/images`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
@@ -26,18 +26,6 @@ module.exports = {
         theme_color: `#FF54AC`,
         display: `minimal-ui`,
         icon: `${__dirname}/static/images/histaff.png`, // This path is relative to the root of the site.
-      },
-    },
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        google: {
-          families: ["PT Serif"],
-        },
-        custom: {
-          families: ["Behdad"],
-          urls: ["/fonts/fonts.css"],
-        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

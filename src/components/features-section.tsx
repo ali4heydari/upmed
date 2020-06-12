@@ -2,42 +2,37 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 import tw from "twin.macro"
 import { StringKeys } from "../utils/enums"
-import thumbnailEvent from "../../static/images/feature-event.png"
-import thumbnailBoard from "../../static/images/feature-board.png"
-import thumbnailNews from "../../static/images/feature-news.png"
-import thumbnailTeams from "../../static/images/feature-team.png"
-import thumbnailStaff from "../../static/images/feature-user.png"
 
 const features = [
   {
     titleStringKey: StringKeys.MEASUREMENT_OF_TREATMENT_OUTPUT,
     descriptionStringKey:
       StringKeys.ABILITY_TO_MEASURE_THE_OUTPUT_OF_TREATMENT_AND_PATIENT_SATISFACTION_IN_QUANTITATIVE_AND_STATISTICAL_TERMS,
-    image: thumbnailEvent,
+    image: "/images/feature-event.png",
   },
   {
     titleStringKey: StringKeys.ANALYTICAL_DASHBOARDS,
     descriptionStringKey:
       StringKeys.ACCESS_TO_ANALYTICAL_DASHBOARDS_AND_DATA_TO_MEASURE_THE_QUALITY_OF_TREATMENT_AND_THE_PERFORMANCE_OF_THE_TREATMENT_TEAM,
-    image: thumbnailBoard,
+    image: "/images/feature-board.png",
   },
   {
     titleStringKey: StringKeys.BETTER_UNDERSTAND_YOUR_SITUATION,
     descriptionStringKey:
       StringKeys.BETTER_UNDERSTAND_YOUR_SITUATION_AND_GET_THE_NECESSARY_INFORMATION_AND_KNOWLEDGE_ABOUT_THE_DISEASE_AND_TREATMENT,
-    image: thumbnailNews,
+    image: "/images/feature-news.png",
   },
   {
     titleStringKey: StringKeys.DETECTION_OF_PROBLEMS,
     descriptionStringKey:
       StringKeys.EARLY_DETECTION_OF_PROBLEMS_AND_PREVENTION_OF_POSSIBLE_LOSSES_AND_PENALTIES,
-    image: thumbnailTeams,
+    image: "/images/feature-team.png",
   },
   {
     titleStringKey: StringKeys.IDENTIFY_PROBLEMS_AFTER_TREATMENT,
     descriptionStringKey:
       StringKeys.IDENTIFY_AND_RESOLVE_PROBLEMS_QUICKLY_THAT_MAY_ARISE_FOR_THE_PATIENT_AFTER_TREATMENT,
-    image: thumbnailStaff,
+    image: "/images/feature-user.png",
   },
 ]
 
