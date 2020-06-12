@@ -44,13 +44,10 @@ const IndexPage = () => {
               css={tw`w-full md:w-2/3 flex flex-col mb-16 items-center text-center`}
             >
               <h1 css={tw`sm:text-4xl text-3xl mb-4 font-medium`}>
-                Knausgaard typewriter readymade marfa
+                {t(StringKeys.SLOGAN)}
               </h1>
               <p css={tw`mb-8 leading-relaxed`}>
-                Kickstarter biodiesel roof party wayfarers cold-pressed. Palo
-                santo live-edge tumeric scenester copper mug flexitarian. Prism
-                vice offal plaid everyday carry. Gluten-free chia VHS squid
-                listicle artisan.
+                {t(StringKeys.WEBSITE_NAME)} {t(StringKeys.INTRODUCE_STARTUP)}
               </p>
             </div>
           </div>

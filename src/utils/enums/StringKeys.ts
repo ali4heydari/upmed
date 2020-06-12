@@ -38,6 +38,9 @@ export enum StringKeys {
   CONTACT_US_TEXT = "contact_us_text",
   OUR_TEAM = "our_team",
   DEVELOPER = "developer",
+  SLOGAN = "slogan",
+  INTRODUCE_STARTUP = "introduce_startup",
+
   ALI_HEYDARI = "ali_heydari",
   ALIREZA_FATEMI = "alireza_fatemi",
   SIYAVASH_GANJI = "siyavash_ganji",
