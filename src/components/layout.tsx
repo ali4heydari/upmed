@@ -10,7 +10,6 @@ import PropTypes from "prop-types"
 import { graphql, Link, useStaticQuery } from "gatsby"
 
 import Header from "./header"
-import "../../static/styles/main.scss"
 import logo from "../../static/images/logo.svg"
 import iconTwitter from "../../static/images/icon-twitter.svg"
 import iconLinkedin from "../../static/images/icon-linkedin.svg"

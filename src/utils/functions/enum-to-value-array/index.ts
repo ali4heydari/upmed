@@ -1,1 +1,1 @@
-export * from './EnumToValueArray';
+export * from './enumToValueArray';

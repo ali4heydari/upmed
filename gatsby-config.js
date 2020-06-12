@@ -28,7 +28,6 @@ module.exports = {
         icon: `${__dirname}/static/images/histaff.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-plugin-sass`,
     {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
