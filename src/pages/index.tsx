@@ -5,6 +5,7 @@ import SEO from "../components/seo"
 import { useTranslation } from "react-i18next"
 import { StringKeys } from "../utils/enums"
 import FeaturesSection from "../components/features-section"
+import sinaLogo from "../../static/images/sina-hospital.jpg"
 
 const IndexPage = () => {
   const { t, i18n } = useTranslation()
@@ -42,32 +43,20 @@ const IndexPage = () => {
             {t(StringKeys.OUR_CUSTOMERS)}
           </h2>
           <div css={tw`flex flex-wrap`}>
-            <div css={tw`w-full md:w-1/3 px-2 mb-4`}>
-              <div css={tw`bg-white rounded shadow py-2`}>
-                <p css={tw`text-gray-800 text-base px-6 mb-5`}>
-                  Monitoring and tracking my health vitals anywhere I go and on
-                  any platform I use has never been easier.
-                </p>
-                <p css={tw`text-gray-500 text-xs md:text-sm px-6`}>John Doe</p>
-              </div>
-            </div>
-            <div css={tw`w-full md:w-1/3 px-2 mb-4`}>
-              <div css={tw`bg-white rounded shadow py-2`}>
-                <p css={tw`text-gray-800 text-base px-6 mb-5`}>
-                  As an Athlete, this is the perfect product for me. I wear my
-                  Smart Health Monitoring Wristwatch everywhere i go, even in
-                  the bathroom since it's waterproof.
-                </p>
-                <p css={tw`text-gray-500 text-xs md:text-sm px-6`}>Jane Doe</p>
-              </div>
-            </div>
-            <div css={tw`w-full md:w-1/3 px-2 mb-4`}>
-              <div css={tw`bg-white rounded shadow py-2`}>
-                <p css={tw`text-gray-800 text-base px-6 mb-5`}>
-                  I don't regret buying this wearble gadget. One of the best
-                  gadgets I own!.
-                </p>
-                <p css={tw`text-gray-500 text-xs md:text-sm px-6`}>James Doe</p>
+            <div css={tw`sm:w-1/4 p-2`}>
+              <div
+                css={tw`bg-white px-6 py-8 rounded-lg shadow-lg text-center`}
+              >
+                <div css={tw`mb-3`}>
+                  <img
+                    css={tw`w-auto mx-auto rounded-full`}
+                    src={sinaLogo}
+                    alt={t(StringKeys.SINA_HOSPITAL)}
+                  />
+                </div>
+                <h2 css={tw`text-xl font-medium text-gray-700`}>
+                  {t(StringKeys.SINA_HOSPITAL)}
+                </h2>
               </div>
             </div>
           </div>

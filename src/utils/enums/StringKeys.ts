@@ -30,4 +30,5 @@ export enum StringKeys {
   BE_THE_FIRST_TO_KNOW_ABOUT_THE_NEWS = "be_the_first_to_know_about_the_news",
   HOME = "home",
   OUR_CUSTOMERS = "our_customers",
+  SINA_HOSPITAL = "sina_hospital",
 }
