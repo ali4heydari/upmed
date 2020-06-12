@@ -24,19 +24,21 @@ const IndexPage = () => {
   return (
     <Layout showHeader={false}>
       <SEO title={t(StringKeys.HOME)} />
-      <div css={[tw`flex flex-col min-h-screen h-full`]}>
+      <div css={[tw`relative flex flex-col min-h-screen h-full`]}>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          css={[
-            tw`flex-grow bg-auto text-white`,
-            css`
-              background-repeat: no-repeat;
-              background-position-x: center;
-              background-color: #376fa9;
-              background-image: url("/images/listrunner_secondillo_dribbble_full_4x.png");
-            `,
-          ]}
-        >
+        <picture>
+          <img
+            src="/images/listrunner_secondillo_dribbble_full_4x.png"
+            alt="Man with a dog"
+            css={[
+              tw`absolute z-0 w-full h-full flex-auto justify-center`,
+              css`
+                object-fit: cover;
+              `,
+            ]}
+          />
+        </picture>
+        <div css={[tw`z-10 flex-grow text-white bg-transparent`]}>
           <div
             css={tw`container mx-auto flex flex-col px-5 py-24 justify-center items-center`}
           >
