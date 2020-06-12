@@ -5,32 +5,35 @@ import SEO from "../components/seo"
 import { useTranslation } from "react-i18next"
 import { StringKeys } from "../utils/enums"
 import FeaturesSection from "../components/features-section"
-import sinaLogo from "../../static/images/sina-hospital.jpg"
 import { graphql, useStaticQuery } from "gatsby"
 
 const IndexPage = () => {
   const { t, i18n } = useTranslation()
   const data = useStaticQuery(graphql`
-      query HeaderQueryIndex {
-          site {
-              siteMetadata {
-                  title
-              }
-          }
+    query HeaderQueryIndex {
+      site {
+        siteMetadata {
+          title
+        }
       }
+    }
   `)
 
   return (
     <Layout>
       <SEO title={t(StringKeys.HOME)} />
-      <div css={[tw`relative flex flex-col h-full`,
-        css`background-color: #376fa9;`]}>
+      <div
+        css={[
+          tw`relative flex flex-col h-full`,
+          css`
+            background-color: #376fa9;
+          `,
+        ]}
+      >
         <div
           css={tw`text-white container mx-auto flex flex-col px-5 justify-center items-center pt-8`}
         >
-          <div
-            css={tw`w-full md:w-2/3 flex flex-col items-center text-center`}
-          >
+          <div css={tw`w-full md:w-2/3 flex flex-col items-center text-center`}>
             <h1 css={tw`sm:text-4xl text-3xl mb-4 font-medium`}>
               {t(StringKeys.SLOGAN)}
             </h1>
@@ -47,7 +50,7 @@ const IndexPage = () => {
               tw`z-0 w-full flex-auto justify-center`,
               css`
                 object-fit: cover;
-              `
+              `,
             ]}
           />
         </picture>
@@ -72,7 +75,7 @@ const IndexPage = () => {
                 <div css={tw`mb-3`}>
                   <img
                     css={tw`w-auto mx-auto rounded-full`}
-                    src={sinaLogo}
+                    src="/images/sina-hospital.jpg"
                     alt={t(StringKeys.SINA_HOSPITAL)}
                   />
                 </div>

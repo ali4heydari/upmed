@@ -5,25 +5,22 @@ import SEO from "../components/seo"
 import { useTranslation } from "react-i18next"
 import tw from "twin.macro"
 import { StringKeys } from "../utils/enums"
-import aliHeydari from "../../static/images/team/ali-heydari.jpg"
-import alirezaFatemi from "../../static/images/team/alireza-fatemi.jpg"
-import siyavashGanji from "../../static/images/team/siyavash-ganji.jpg"
 
 const team = [
   {
     nameStringKey: StringKeys.ALIREZA_FATEMI,
     roleStringKey: StringKeys.DEVELOPER,
-    image: alirezaFatemi,
+    image: "/images/team/alireza-fatemi.jpg",
   },
   {
     nameStringKey: StringKeys.SIYAVASH_GANJI,
     roleStringKey: StringKeys.DEVELOPER,
-    image: siyavashGanji,
+    image: "/images/team/siyavash-ganji.jpg",
   },
   {
     nameStringKey: StringKeys.ALI_HEYDARI,
     roleStringKey: StringKeys.DEVELOPER,
-    image: aliHeydari,
+    image: "/images/team/ali-heydari.jpg",
   },
 ]
 const AboutPage = () => {

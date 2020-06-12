@@ -25,9 +25,6 @@ const Header = ({ siteTitle }) => {
           <a href={`/${Links.CONTACT_US}`} css={[tw`mr-5 hover:text-gray-900`]}>
             {t(StringKeys.CONTACT_US)}
           </a>
-          <a href={`/${Links.PRIVACY}`} css={tw`mr-5 hover:text-gray-900`}>
-            {t(StringKeys.PRIVACY)}
-          </a>
           <a href={`/${Links.TERMS}`} css={tw`mr-5 hover:text-gray-900`}>
             {t(StringKeys.TERMS)}
           </a>

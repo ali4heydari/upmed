@@ -51,14 +51,6 @@ const Footer = () => {
                   {t(StringKeys.TERMS)}
                 </a>
               </li>
-              <li>
-                <a
-                  href={`/${Links.PRIVACY}`}
-                  css={tw`text-gray-600 hover:text-gray-800`}
-                >
-                  {t(StringKeys.PRIVACY)}
-                </a>
-              </li>
             </nav>
           </div>
           {/*<div css={tw`lg:w-1/4 md:w-1/2 w-full px-4`}>

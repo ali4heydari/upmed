@@ -21,7 +21,6 @@ export enum StringKeys {
   WEBSITE_NAME = "website_name",
   ABOUT_US = "about_us",
   CONTACT_US = "contact_us",
-  PRIVACY = "privacy",
   TERMS = "terms",
   FEATURES = "features",
   SUPPORT = "support",
@@ -44,4 +43,10 @@ export enum StringKeys {
   ALI_HEYDARI = "ali_heydari",
   ALIREZA_FATEMI = "alireza_fatemi",
   SIYAVASH_GANJI = "siyavash_ganji",
+
+  FEEDBACK = "feedback",
+  NAME = "name",
+  MESSAGE = "message",
+  SEND = "send",
+  GET_IN_TOUCH_WITH_US = "get_in_touch_with_us",
 }
