@@ -14,7 +14,12 @@ const FeaturesSection = () => {
       <h2 css={tw`text-4xl font-bold text-center text-gray-800 mb-8`}>
         {t(StringKeys.FEATURES)}
       </h2>
-      <div css={tw`flex items-center flex-wrap mb-20`}>
+      <div
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+        css={tw`flex items-center flex-wrap mb-20`}
+      >
         <div css={tw`w-full md:w-1/2`}>
           <h4 css={tw`text-3xl text-gray-800 font-bold mb-3`}>
             {t(StringKeys.MEASUREMENT_OF_TREATMENT_OUTPUT)}
@@ -30,7 +35,12 @@ const FeaturesSection = () => {
         </div>
       </div>
 
-      <div css={tw`flex items-center flex-wrap mb-20`}>
+      <div
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+        css={tw`flex items-center flex-wrap mb-20`}
+      >
         <div css={tw`w-full md:w-1/2`}>
           <img src={thumbnailBoard} alt="Reporting" />
         </div>
@@ -46,7 +56,12 @@ const FeaturesSection = () => {
         </div>
       </div>
 
-      <div css={tw`flex items-center flex-wrap mb-20`}>
+      <div
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+        css={tw`flex items-center flex-wrap mb-20`}
+      >
         <div css={tw`w-full md:w-1/2`}>
           <h4 css={tw`text-3xl text-gray-800 font-bold mb-3`}>
             {t(StringKeys.BETTER_UNDERSTAND_YOUR_SITUATION)}
@@ -61,7 +76,12 @@ const FeaturesSection = () => {
           <img src={thumbnailNews} alt="Syncing" />
         </div>
       </div>
-      <div css={tw`flex items-center flex-wrap mb-20`}>
+      <div
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+        css={tw`flex items-center flex-wrap mb-20`}
+      >
         <div css={tw`w-full md:w-1/2`}>
           <img src={thumbnailTeams} alt="Reporting" />
         </div>
@@ -77,7 +97,12 @@ const FeaturesSection = () => {
         </div>
       </div>
 
-      <div css={tw`flex items-center flex-wrap mb-20`}>
+      <div
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+        css={tw`flex items-center flex-wrap mb-20`}
+      >
         <div css={tw`w-full md:w-1/2`}>
           <h4 css={tw`text-3xl text-gray-800 font-bold mb-3`}>
             {t(
@@ -94,7 +119,13 @@ const FeaturesSection = () => {
           <img src={thumbnailStaff} alt="Syncing" />
         </div>
       </div>
-      <div css={tw`flex items-center flex-wrap mb-20`}>
+
+      <div
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+        css={tw`flex items-center flex-wrap mb-20`}
+      >
         <div css={tw`w-full md:w-1/2`}>
           <img src={thumbnailNews} alt="Reporting" />
         </div>
@@ -110,7 +141,12 @@ const FeaturesSection = () => {
         </div>
       </div>
 
-      <div css={tw`flex items-center flex-wrap mb-20`}>
+      <div
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-easing="ease"
+        css={tw`flex items-center flex-wrap mb-20`}
+      >
         <div css={tw`w-full md:w-1/2`}>
           <h4 css={tw`text-3xl text-gray-800 font-bold mb-3`}>
             {t(StringKeys.IMPROVING_THE_QUALITY_OF_TREATMENT)}
