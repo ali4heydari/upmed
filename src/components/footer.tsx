@@ -61,7 +61,7 @@ const Footer = () => {
               </li>
             </nav>
           </div>
-          <div css={tw`lg:w-1/4 md:w-1/2 w-full px-4`}>
+          {/*<div css={tw`lg:w-1/4 md:w-1/2 w-full px-4`}>
             <h2
               css={tw`font-medium text-gray-900 tracking-widest text-sm mb-3`}
             >
@@ -81,7 +81,7 @@ const Footer = () => {
                 <a css={tw`text-gray-600 hover:text-gray-800`}>Fourth Link</a>
               </li>
             </nav>
-          </div>
+          </div>*/}
           <div css={tw`lg:w-1/4 md:w-1/2 w-full px-4`}>
             <h2
               css={tw`font-medium text-gray-900 tracking-widest text-sm mb-3`}
