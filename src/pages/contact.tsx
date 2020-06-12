@@ -47,16 +47,20 @@ const ContactPage = () => {
                 <h2 css={tw`font-medium text-gray-900 tracking-widest text-sm`}>
                   {t(StringKeys.EMAIL)}
                 </h2>
-                <a css={tw`text-indigo-500 leading-relaxed`}>
-                  {SiteConfigs.CONTACT_EMAIL}
-                </a>
+                <p dir="ltr" css={tw`text-indigo-500 leading-relaxed`}>
+                  <a href={`mailto:${SiteConfigs.CONTACT_EMAIL}`}>
+                    {SiteConfigs.CONTACT_EMAIL}
+                  </a>
+                </p>
                 <h2
                   css={tw`font-medium text-gray-900 tracking-widest text-sm mt-4`}
                 >
                   {t(StringKeys.PHONE)}
                 </h2>
-                <p dir="ltr" css={tw`leading-relaxed`}>
-                  {SiteConfigs.CONTACT_PHONE}
+                <p dir="ltr" css={tw`text-indigo-500 leading-relaxed`}>
+                  <a href={`tel:${SiteConfigs.CONTACT_PHONE.replace(" ", "")}`}>
+                    {SiteConfigs.CONTACT_PHONE}
+                  </a>
                 </p>
               </div>
             </div>
@@ -64,7 +68,9 @@ const ContactPage = () => {
           <div
             css={tw`lg:w-1/3 md:w-1/2 bg-white flex flex-col md:ml-auto w-full md:py-8 mt-8 md:mt-0`}
           >
-            <h2 css={tw`text-gray-900 text-lg mb-1 font-medium`}>{t(StringKeys.FEEDBACK)}</h2>
+            <h2 css={tw`text-gray-900 text-lg mb-1 font-medium`}>
+              {t(StringKeys.FEEDBACK)}
+            </h2>
             <p css={tw`leading-relaxed mb-5 text-gray-600`}>
               {t(StringKeys.GET_IN_TOUCH_WITH_US)}
             </p>
