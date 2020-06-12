@@ -11,7 +11,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <SEO title="Make your Staff and Workspace Happy" />
+      <SEO title={t(StringKeys.HOME)} />
       <div
         css={tw`py-20`}
         style={{
@@ -39,7 +39,7 @@ const IndexPage = () => {
       <section css={tw`bg-gray-100`}>
         <div css={tw`container mx-auto px-6 py-20`}>
           <h2 css={tw`text-4xl font-bold text-center text-gray-800 mb-8`}>
-            Testimonials
+            {t(StringKeys.OUR_CUSTOMERS)}
           </h2>
           <div css={tw`flex flex-wrap`}>
             <div css={tw`w-full md:w-1/3 px-2 mb-4`}>

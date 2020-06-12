@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 import { useTranslation } from "react-i18next"
-import { Languages } from "../utils/enums"
+import { Languages, StringKeys } from "../utils/enums"
 
 function SEO({ description, lang, meta, title }) {
   const { site } = useStaticQuery(
@@ -19,7 +19,7 @@ function SEO({ description, lang, meta, title }) {
       }
     `
   )
-  const { i18n } = useTranslation()
+  const { i18n, t } = useTranslation()
   const metaDescription = description || site.siteMetadata.description
 
   return (
@@ -32,7 +32,7 @@ function SEO({ description, lang, meta, title }) {
         dir: i18n.language === Languages.PERSIAN ? "rtl" : "ltr",
       }}
       title={title}
-      titleTemplate={`%s | ${site.siteMetadata.title}`}
+      titleTemplate={`%s | ${t(StringKeys.WEBSITE_NAME)}`}
       link={[
         {
           href: "http://cdn.font-store.ir/behdad.css",

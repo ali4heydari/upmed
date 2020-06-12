@@ -12,7 +12,7 @@ const FeaturesSection = () => {
   return (
     <section css={tw`container mx-auto px-6 p-10`}>
       <h2 css={tw`text-4xl font-bold text-center text-gray-800 mb-8`}>
-        Features
+        {t(StringKeys.FEATURES)}
       </h2>
       <div css={tw`flex items-center flex-wrap mb-20`}>
         <div css={tw`w-full md:w-1/2`}>
