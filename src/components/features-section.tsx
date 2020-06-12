@@ -45,7 +45,12 @@ const FeaturesSection = () => {
   const { t } = useTranslation()
   return (
     <section css={tw`container mx-auto px-6 p-10`}>
-      <h2 css={tw`text-4xl font-bold text-center text-gray-800 mb-8`}>
+      <h2
+        data-sal="slide-up"
+        data-sal-delay="200"
+        data-sal-easing="ease"
+        css={tw`text-4xl font-bold text-center text-gray-800 mb-8`}
+      >
         {t(StringKeys.FEATURES)}
       </h2>
       {features.map((feature, index) => (

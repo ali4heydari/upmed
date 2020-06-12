@@ -18,7 +18,6 @@
   "get_started": "شروع کنید",
   "copyright": "حق نشر",
   "all_rights_reserved": "کلیه حقوق محفوظ است",
-  "website_name": "هوش‌پرداز",
   "about_us": "درباره‌ی ما",
   "contact_us": "تماس با ما",
   "privacy": "حریم خصوصی",
@@ -30,5 +29,18 @@
   "be_the_first_to_know_about_the_news": "اولین نفر از اخبار ما مطلع شوید",
   "home": "خانه",
   "our_customers": "مشتریان ما",
-  "sina_hospital": "بیمارستان سینا"
+  "address": "نشانی",
+  "email": "رایانامه",
+  "phone": "تلفن",
+  "website_name": "هوش‌پرداز",
+  "sina_hospital": "بیمارستان سینا",
+  "website_address": "تهران، دانشگاه شریف، مرکز خدمات فناوری",
+  "contact_us_text": "هزینه و مدت زمان پیاده‌سازی سیستم با توجه به تعداد و نوع فرایندها و امکانات مورد نیاز متفاوت است. برای اطلاعات و راهنمایی‌های بیشتر با ما تماس بگیرید.",
+  "developer": "توسعه‌دهنده",
+  "our_team": "تیم ما",
+
+
+  "ali_heydari": "علی حیدری",
+  "alireza_fatemi": "سید علی‌رضا فاطمی جهرمی",
+  "siyavash_ganji": "سیاوش گنجی"
 }
