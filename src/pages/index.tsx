@@ -25,9 +25,7 @@ const IndexPage = () => {
     <Layout showHeader={false}>
       <SEO title={t(StringKeys.HOME)} />
       <div
-        css={[tw`flex flex-col`,css`
-            height: 100vh;
-        `]}
+        css={[tw`flex flex-col min-h-screen h-full`]}
       >
         <Header siteTitle={data.site.siteMetadata.title} />
         <div css={[tw`flex-grow bg-auto text-white`, css`
