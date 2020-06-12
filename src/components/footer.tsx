@@ -93,8 +93,9 @@ const Footer = () => {
             >
               <input
                 css={tw`w-40 sm:w-auto bg-gray-100 rounded xl:mr-4 lg:mr-0 sm:mr-4 mr-2 border border-gray-400 focus:outline-none focus:border-indigo-500 text-base py-2 px-4`}
-                placeholder="someone@gmail.com"
+                placeholder="Enter your email address"
                 type="text"
+                autoComplete="email"
               />
               <button
                 css={tw`lg:mt-2 xl:mt-0 flex-shrink-0 inline-flex text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 rounded`}
