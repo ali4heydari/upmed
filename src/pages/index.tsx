@@ -6,54 +6,51 @@ import { useTranslation } from "react-i18next"
 import { StringKeys } from "../utils/enums"
 import FeaturesSection from "../components/features-section"
 import sinaLogo from "../../static/images/sina-hospital.jpg"
-import Header from "../components/header"
 import { graphql, useStaticQuery } from "gatsby"
 
 const IndexPage = () => {
   const { t, i18n } = useTranslation()
   const data = useStaticQuery(graphql`
-    query HeaderQueryIndex {
-      site {
-        siteMetadata {
-          title
-        }
+      query HeaderQueryIndex {
+          site {
+              siteMetadata {
+                  title
+              }
+          }
       }
-    }
   `)
 
   return (
-    <Layout showHeader={false}>
+    <Layout>
       <SEO title={t(StringKeys.HOME)} />
-      <div css={[tw`relative flex flex-col min-h-screen h-full`]}>
-        <Header siteTitle={data.site.siteMetadata.title} />
+      <div css={[tw`relative flex flex-col h-full`,
+        css`background-color: #376fa9;`]}>
+        <div
+          css={tw`text-white container mx-auto flex flex-col px-5 justify-center items-center pt-8`}
+        >
+          <div
+            css={tw`w-full md:w-2/3 flex flex-col items-center text-center`}
+          >
+            <h1 css={tw`sm:text-4xl text-3xl mb-4 font-medium`}>
+              {t(StringKeys.SLOGAN)}
+            </h1>
+            <p css={tw`leading-relaxed`}>
+              {t(StringKeys.WEBSITE_NAME)} {t(StringKeys.INTRODUCE_STARTUP)}
+            </p>
+          </div>
+        </div>
         <picture>
           <img
-            src="/images/listrunner_secondillo_dribbble_full_4x.png"
+            src="/images/intro.png"
             alt="Man with a dog"
             css={[
-              tw`absolute z-0 w-full h-full flex-auto justify-center`,
+              tw`z-0 w-full flex-auto justify-center`,
               css`
                 object-fit: cover;
-              `,
+              `
             ]}
           />
         </picture>
-        <div css={[tw`z-10 flex-grow text-white bg-transparent`]}>
-          <div
-            css={tw`container mx-auto flex flex-col px-5 py-24 justify-center items-center`}
-          >
-            <div
-              css={tw`w-full md:w-2/3 flex flex-col mb-16 items-center text-center`}
-            >
-              <h1 css={tw`sm:text-4xl text-3xl mb-4 font-medium`}>
-                {t(StringKeys.SLOGAN)}
-              </h1>
-              <p css={tw`mb-8 leading-relaxed`}>
-                {t(StringKeys.WEBSITE_NAME)} {t(StringKeys.INTRODUCE_STARTUP)}
-              </p>
-            </div>
-          </div>
-        </div>
       </div>
       <FeaturesSection />
 
