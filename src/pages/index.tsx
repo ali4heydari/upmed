@@ -12,35 +12,46 @@ import { graphql, useStaticQuery } from "gatsby"
 const IndexPage = () => {
   const { t, i18n } = useTranslation()
   const data = useStaticQuery(graphql`
-      query HeaderQueryIndex {
-          site {
-              siteMetadata {
-                  title
-              }
-          }
+    query HeaderQueryIndex {
+      site {
+        siteMetadata {
+          title
+        }
       }
+    }
   `)
 
   return (
     <Layout showHeader={false}>
       <SEO title={t(StringKeys.HOME)} />
-      <div
-        css={[tw`flex flex-col min-h-screen h-full`]}
-      >
+      <div css={[tw`flex flex-col min-h-screen h-full`]}>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div css={[tw`flex-grow bg-auto text-white`, css`
-            background-repeat: no-repeat;
-            background-position-x: center;
-            background-color: #376fa9;
-            background-image: url("/images/listrunner_secondillo_dribbble_full_4x.png")`]
-        }>
-          <div css={tw`container mx-auto flex flex-col px-5 py-24 justify-center items-center`}>
-            <div css={tw`w-full md:w-2/3 flex flex-col mb-16 items-center text-center`}>
-              <h1 css={tw`sm:text-4xl text-3xl mb-4 font-medium`}>Knausgaard typewriter
-                readymade marfa</h1>
-              <p css={tw`mb-8 leading-relaxed`}>Kickstarter biodiesel roof party wayfarers cold-pressed. Palo santo
-                live-edge tumeric scenester copper mug flexitarian. Prism vice offal plaid everyday carry. Gluten-free
-                chia VHS squid listicle artisan.</p>
+        <div
+          css={[
+            tw`flex-grow bg-auto text-white`,
+            css`
+              background-repeat: no-repeat;
+              background-position-x: center;
+              background-color: #376fa9;
+              background-image: url("/images/listrunner_secondillo_dribbble_full_4x.png");
+            `,
+          ]}
+        >
+          <div
+            css={tw`container mx-auto flex flex-col px-5 py-24 justify-center items-center`}
+          >
+            <div
+              css={tw`w-full md:w-2/3 flex flex-col mb-16 items-center text-center`}
+            >
+              <h1 css={tw`sm:text-4xl text-3xl mb-4 font-medium`}>
+                Knausgaard typewriter readymade marfa
+              </h1>
+              <p css={tw`mb-8 leading-relaxed`}>
+                Kickstarter biodiesel roof party wayfarers cold-pressed. Palo
+                santo live-edge tumeric scenester copper mug flexitarian. Prism
+                vice offal plaid everyday carry. Gluten-free chia VHS squid
+                listicle artisan.
+              </p>
             </div>
           </div>
         </div>
@@ -52,7 +63,12 @@ const IndexPage = () => {
           <h2 css={tw`text-4xl font-bold text-center text-gray-800 mb-8`}>
             {t(StringKeys.OUR_CUSTOMERS)}
           </h2>
-          <div css={tw`flex flex-wrap`}>
+          <div
+            data-sal="zoom-in"
+            data-sal-delay="300"
+            data-sal-easing="ease"
+            css={tw`flex flex-wrap`}
+          >
             <div css={tw`sm:w-1/4 p-2`}>
               <div
                 css={tw`bg-white px-6 py-8 rounded-lg shadow-lg text-center`}
