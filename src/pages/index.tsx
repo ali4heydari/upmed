@@ -1,40 +1,52 @@
 import React from "react"
-import tw from "twin.macro"
+import tw, { css } from "twin.macro"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { useTranslation } from "react-i18next"
 import { StringKeys } from "../utils/enums"
 import FeaturesSection from "../components/features-section"
 import sinaLogo from "../../static/images/sina-hospital.jpg"
+import Header from "../components/header"
+import { graphql, useStaticQuery } from "gatsby"
 
 const IndexPage = () => {
   const { t, i18n } = useTranslation()
+  const data = useStaticQuery(graphql`
+      query HeaderQueryIndex {
+          site {
+              siteMetadata {
+                  title
+              }
+          }
+      }
+  `)
 
   return (
-    <Layout>
+    <Layout showHeader={false}>
       <SEO title={t(StringKeys.HOME)} />
       <div
-        css={tw`py-20`}
-        style={{
-          background: "linear-gradient(90deg, #667eea 0%, #764ba2 100%)",
-        }}
+        css={[tw`flex flex-col`,css`
+            height: 100vh;
+        `]}
       >
-        <div css={tw`container mx-auto px-6`}>
-          <h2 css={tw`text-4xl font-bold mb-2 text-white`}>
-            Smart Health Monitoring Wristwatch!
-          </h2>
-          <h3 css={tw`text-2xl mb-8 text-gray-200`}>
-            Monitor your health vitals smartly anywhere you go.
-          </h3>
-
-          <button
-            css={tw`bg-white font-bold rounded-full py-4 px-8 shadow-lg uppercase tracking-wider`}
-          >
-            Pre Order
-          </button>
+        <Header siteTitle={data.site.siteMetadata.title} />
+        <div css={[tw`flex-grow bg-auto text-white`, css`
+            background-repeat: no-repeat;
+            background-position-x: center;
+            background-color: #376fa9;
+            background-image: url("/images/listrunner_secondillo_dribbble_full_4x.png")`]
+        }>
+          <div css={tw`container mx-auto flex flex-col px-5 py-24 justify-center items-center`}>
+            <div css={tw`w-full md:w-2/3 flex flex-col mb-16 items-center text-center`}>
+              <h1 css={tw`sm:text-4xl text-3xl mb-4 font-medium`}>Knausgaard typewriter
+                readymade marfa</h1>
+              <p css={tw`mb-8 leading-relaxed`}>Kickstarter biodiesel roof party wayfarers cold-pressed. Palo santo
+                live-edge tumeric scenester copper mug flexitarian. Prism vice offal plaid everyday carry. Gluten-free
+                chia VHS squid listicle artisan.</p>
+            </div>
+          </div>
         </div>
       </div>
-
       <FeaturesSection />
 
       <section css={tw`bg-gray-100`}>

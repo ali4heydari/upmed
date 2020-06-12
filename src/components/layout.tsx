@@ -16,7 +16,7 @@ import i18n from "../i18n/config"
 import Footer from "./footer"
 import "./layout.css"
 
-const Layout = ({ children }) => {
+const Layout = ({ children, showHeader=true }) => {
   const data = useStaticQuery(graphql`
     query HeaderQuery {
       site {
@@ -29,7 +29,7 @@ const Layout = ({ children }) => {
   return (
     <I18nextProvider i18n={i18n}>
       <Theme>
-        <Header siteTitle={data.site.siteMetadata.title} />
+        {showHeader && <Header siteTitle={data.site.siteMetadata.title} />}
         <main>{children}</main>
         <Footer />
       </Theme>

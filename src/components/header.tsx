@@ -12,7 +12,7 @@ const Header = ({ siteTitle }) => {
   const themeContext = useContext(ThemeContext)
   console.log(themeContext)
   return (
-    <header css={tw`text-gray-700`}>
+    <header css={tw`text-gray-700 bg-white`}>
       <div
         css={tw`container mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center`}
       >
