@@ -6,6 +6,7 @@ module.exports = {
     author: `@mostafasoufi`,
   },
   plugins: [
+    `gatsby-theme-apollo`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
