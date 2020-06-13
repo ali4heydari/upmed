@@ -12,6 +12,16 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
+      resolve: `gatsby-plugin-graphql-codegen`, // https://github.com/d4rekanguok/gatsby-typescript/tree/master/packages/gatsby-plugin-graphql-codegen
+      options: {
+        documentPaths: [
+          "./src/**/*.{ts,tsx,graphql}",
+          "./.cache/fragments/*.js",
+          "./node_modules/gatsby-*/**/*.js",
+        ],
+      },
+    },
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `images`,
