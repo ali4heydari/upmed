@@ -1,37 +1,27 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import tw, { css } from "twin.macro"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { useTranslation } from "react-i18next"
 import { StringKeys } from "../utils/enums"
 import FeaturesSection from "../components/features-section"
-import { graphql, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 
 const IndexPage = () => {
   const { t, i18n } = useTranslation()
-  const data = useStaticQuery(graphql`
-    query HeaderQueryIndex {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `)
-
   return (
     <Layout>
       <SEO title={t(StringKeys.HOME)} />
       <div
         css={[
-          tw`relative flex flex-col h-full`,
+          tw`relative flex flex-col h-full min-h-screen`,
           css`
             background-color: #376fa9;
-          `,
+          `
         ]}
       >
         <div
-          css={tw`text-white container mx-auto flex flex-col px-5 justify-center items-center pt-8`}
+          css={tw`text-white container mx-auto flex flex-col px-5 justify-center items-center pt-12`}
         >
           <div css={tw`w-full md:w-2/3 flex flex-col items-center text-center`}>
             <h1 css={tw`sm:text-4xl text-3xl mb-4 font-medium`}>
@@ -50,7 +40,7 @@ const IndexPage = () => {
               tw`z-0 w-full flex-auto justify-center`,
               css`
                 object-fit: cover;
-              `,
+              `
             ]}
           />
         </picture>

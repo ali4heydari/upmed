@@ -29,7 +29,7 @@ const Layout = ({ children, showHeader=true }) => {
   return (
     <I18nextProvider i18n={i18n}>
       <Theme>
-        {showHeader && <Header siteTitle={data.site.siteMetadata.title} />}
+        {showHeader && <Header />}
         <main>{children}</main>
         <Footer />
       </Theme>
