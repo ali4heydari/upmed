@@ -8,10 +8,12 @@ cache:
     # Enables git-lab CI caching. Both .cache and public must be cached, otherwise builds will fail.
     - .cache/
     - public/
+    - .yarn
 
 pages:
+  stage: deploy
   script:
-    - npm install
+    - yarn install --frozen-lockfile --no-progress --cache-folder .yarn
     - ./node_modules/.bin/gatsby build --prefix-paths
   artifacts:
     paths:
