@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `/landing`,
+  pathPrefix: `/landing-page`,
   siteMetadata: {
     title: `HiStaff`,
     description: `Make your Staff and Workspace Happy`,
