@@ -53,18 +53,15 @@ const IndexPage = () => {
             {t(StringKeys.OUR_CUSTOMERS)}
           </h2>
           <div
-            data-sal="zoom-in"
-            data-sal-delay="300"
-            data-sal-easing="ease"
             css={tw`flex flex-wrap`}
           >
             <div css={tw`sm:w-1/4 p-2`}>
               <div
-                css={tw`bg-white px-6 py-8 rounded-lg shadow-lg text-center`}
+                css={tw`bg-white px-6 py-8 shadow-lg text-center`}
               >
                 <div css={tw`mb-3`}>
                   <img
-                    css={tw`w-auto mx-auto rounded-full`}
+                    css={tw`w-auto mx-auto`}
                     src="/images/sina-hospital.jpg"
                     alt={t(StringKeys.SINA_HOSPITAL)}
                   />

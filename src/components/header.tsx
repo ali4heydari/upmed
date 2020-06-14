@@ -1,10 +1,11 @@
 import React, { Fragment, useEffect, useState } from "react"
 import { useTranslation } from "react-i18next"
 import { Link } from "gatsby"
-import tw from "twin.macro"
+import tw, { css } from "twin.macro"
 import { StringKeys } from "../utils/enums"
 import { Links } from "../utils/enums/Links"
 import MenuIcon from "mdi-react/MenuIcon"
+import { Logo } from "./Logo"
 
 const PATHS = [
   {
@@ -55,18 +56,9 @@ const Header = () => {
             to="/"
             css={tw`flex flex-auto lg:w-1/5 font-medium items-center text-gray-900 justify-center`}
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              css={tw`w-10 h-10 text-white p-2 bg-indigo-500 rounded-full`}
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
-            </svg>
+            <div css={css`margin-top: -20px;margin-bottom: -20px`}>
+              <Logo />
+            </div>
             <span css={tw`ml-3 text-xl`}>{t(StringKeys.WEBSITE_NAME)}</span>
           </Link>
 
