@@ -1,3 +1,6 @@
+graphql-types.ts
+schema.graphql
+
 # Logs
 logs
 *.log
