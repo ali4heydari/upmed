@@ -5,26 +5,62 @@ import SEO from "../components/seo"
 import { useTranslation } from "react-i18next"
 import tw from "twin.macro"
 import { StringKeys } from "../utils/enums"
+import { graphql, useStaticQuery } from "gatsby"
+import Img from "gatsby-image"
 
-const team = [
-  {
+import { Get_Team_ImagesQuery } from "../../graphql-types"
+
+const team = {
+  "alireza-fatemi.jpg": {
     nameStringKey: StringKeys.ALIREZA_FATEMI,
     roleStringKey: StringKeys.DEVELOPER,
-    image: "/images/team/alireza-fatemi.jpg",
   },
-  {
+  "siyavash-ganji.jpg": {
     nameStringKey: StringKeys.SIYAVASH_GANJI,
     roleStringKey: StringKeys.DEVELOPER,
-    image: "/images/team/siyavash-ganji.jpg",
   },
-  {
+  "ali-heydari.jpg": {
     nameStringKey: StringKeys.ALI_HEYDARI,
     roleStringKey: StringKeys.DEVELOPER,
-    image: "/images/team/ali-heydari.jpg",
   },
-]
+}
+
+const getTeamImages = graphql`
+  query GET_TEAM_IMAGES {
+    allFile(
+      filter: {
+        relativePath: {
+          in: [
+            "team/alireza-fatemi.jpg"
+            "team/siyavash-ganji.jpg"
+            "team/ali-heydari.jpg"
+          ]
+        }
+      }
+    ) {
+      edges {
+        node {
+          relativePath
+          base
+          childImageSharp {
+            fluid {
+              base64
+              src
+              srcSet
+              sizes
+              aspectRatio
+            }
+          }
+        }
+      }
+    }
+  }
+`
+
 const AboutPage = () => {
   const { t } = useTranslation()
+  const { allFile } = useStaticQuery<Get_Team_ImagesQuery>(getTeamImages)
+  console.log("allFile", allFile)
   return (
     <Layout>
       <SEO title={t(StringKeys.ABOUT_US)} />
@@ -41,26 +77,27 @@ const AboutPage = () => {
             </p>*/}
           </div>
           <div css={tw`flex flex-wrap`}>
-            {team.map((member, index) => (
+            {allFile.edges.map(({ node }, index) => (
               <div
-                key={member.nameStringKey}
+                key={team[node.base].nameStringKey}
                 data-sal="zoom-in"
                 data-sal-delay={(index + 1) * 100}
                 data-sal-easing="ease"
                 css={tw`p-4 lg:w-1/4 md:w-1/2`}
               >
                 <div css={tw`h-full flex flex-col items-center text-center`}>
-                  <img
-                    alt={t(member.nameStringKey)}
+                  <Img
+                    alt={t(team[node.base].nameStringKey)}
                     css={tw`flex-shrink-0 rounded-lg w-full h-56 object-cover object-center mb-4`}
-                    src={member.image}
+                    // @ts-ignore
+                    fluid={node.childImageSharp!.fluid}
                   />
                   <div css={tw`w-full`}>
                     <h2 css={tw`font-medium text-lg text-gray-900`}>
-                      {t(member.nameStringKey)}
+                      {t(team[node.base].nameStringKey)}
                     </h2>
                     <h3 css={tw`text-gray-500 mb-3`}>
-                      {t(member.roleStringKey)}
+                      {t(team[node.base].roleStringKey)}
                     </h3>
                     <span css={tw`inline-flex`}>
                       <a css={tw`text-gray-500`}>

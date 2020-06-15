@@ -32,6 +32,7 @@ export enum StringKeys {
   SINA_HOSPITAL = "sina_hospital",
   ADDRESS = "address",
   EMAIL = "email",
+  ENTER_EMAIL_ADDRESS = "enter_email_address",
   PHONE = "phone",
   WEBSITE_ADDRESS = "website_address",
   CONTACT_US_TEXT = "contact_us_text",

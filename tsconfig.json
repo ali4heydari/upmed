@@ -1,5 +1,10 @@
 {
-  "include": ["./src/**/*", "./twin.d.ts", "./global.d.ts"],
+  "include": [
+    "./src/**/*",
+    "./twin.d.ts",
+    "./global.d.ts",
+    "./graphql-types.ts"
+  ],
   "compilerOptions": {
     "target": "esnext",
     "module": "esnext",

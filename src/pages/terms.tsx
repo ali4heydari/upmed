@@ -6,8 +6,31 @@ import tw from "twin.macro"
 import { useTranslation } from "react-i18next"
 import { StringKeys } from "../utils/enums"
 import { Links } from "../utils/enums/Links"
+
+import { Get_Agreement_ImageQuery } from "../../graphql-types"
+import Img from "gatsby-image"
+import { graphql, useStaticQuery } from "gatsby"
+
+const getAgreementImage = graphql`
+  query GET_AGREEMENT_IMAGE {
+    file(relativePath: { eq: "agreement.jpg" }) {
+      childImageSharp {
+        fluid {
+          base64
+          src
+          srcSet
+          sizes
+          aspectRatio
+        }
+      }
+    }
+  }
+`
+
 const TermsPage = () => {
   const { t } = useTranslation()
+  const { file } = useStaticQuery<Get_Agreement_ImageQuery>(getAgreementImage)
+
   return (
     <Layout>
       <SEO title={t(StringKeys.TERMS)} />
@@ -46,9 +69,10 @@ const TermsPage = () => {
           <div
             css={tw`lg:w-1/2 sm:w-1/3 w-full rounded-lg overflow-hidden mt-6 sm:mt-0`}
           >
-            <img
+            <Img
               css={tw`object-cover object-center w-full h-full`}
-              src="/images/agreement.jpg"
+              // @ts-ignore
+              fluid={file!.childImageSharp!.fluid}
               alt="agreement"
             />
           </div>
