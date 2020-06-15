@@ -14,10 +14,44 @@ module.exports = {
       resolve: `gatsby-plugin-graphql-codegen`, // https://github.com/d4rekanguok/gatsby-typescript/tree/master/packages/gatsby-plugin-graphql-codegen
       options: {
         documentPaths: [
-          "./src/**/*.{ts,tsx,graphql}",
+          "./src/**/*.{ts,tsx}",
           "./.cache/fragments/*.js",
           "./node_modules/gatsby-*/**/*.js",
         ],
+        codegenConfig: {
+          avoidOptionals: true,
+          scalars: {
+            DateTime: "string",
+            Date: "string",
+            JSON: "{ [key: string]: any }",
+          },
+          hooks: {
+            afterOneFileWrite: "prettier --write",
+          },
+          codegenPlugins: [
+            // built-in plugin.
+            // Use `typescript` for `@graphql-codegen/typescript`
+            // and `operations` for `@graphql-codegen/typescript-operations`
+            {
+              resolve: "typescript",
+              options: {
+                namingConvention: {
+                  transformUnderscore: true,
+                  enumValues: "keep",
+                },
+              },
+            },
+            {
+              resolve: "operations",
+              options: {
+                namingConvention: {
+                  transformUnderscore: true,
+                  enumValues: "keep",
+                },
+              },
+            },
+          ],
+        },
       },
     },
     {

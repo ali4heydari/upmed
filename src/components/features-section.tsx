@@ -2,42 +2,75 @@ import React from "react"
 import { useTranslation } from "react-i18next"
 import tw from "twin.macro"
 import { StringKeys } from "../utils/enums"
+import { graphql, useStaticQuery } from "gatsby"
+import { Get_Feature_ImagesQuery } from "../../graphql-types"
+import Img from "gatsby-image"
 
-const features = [
-  {
+const features = {
+  "feature-event.png": {
     titleStringKey: StringKeys.MEASUREMENT_OF_TREATMENT_OUTPUT,
     descriptionStringKey:
       StringKeys.ABILITY_TO_MEASURE_THE_OUTPUT_OF_TREATMENT_AND_PATIENT_SATISFACTION_IN_QUANTITATIVE_AND_STATISTICAL_TERMS,
-    image: "/images/feature-event.png",
   },
-  {
+  "feature-board.png": {
     titleStringKey: StringKeys.ANALYTICAL_DASHBOARDS,
     descriptionStringKey:
       StringKeys.ACCESS_TO_ANALYTICAL_DASHBOARDS_AND_DATA_TO_MEASURE_THE_QUALITY_OF_TREATMENT_AND_THE_PERFORMANCE_OF_THE_TREATMENT_TEAM,
-    image: "/images/feature-board.png",
   },
-  {
+  "feature-news.png": {
     titleStringKey: StringKeys.BETTER_UNDERSTAND_YOUR_SITUATION,
     descriptionStringKey:
       StringKeys.BETTER_UNDERSTAND_YOUR_SITUATION_AND_GET_THE_NECESSARY_INFORMATION_AND_KNOWLEDGE_ABOUT_THE_DISEASE_AND_TREATMENT,
-    image: "/images/feature-news.png",
   },
-  {
+  "feature-team.png": {
     titleStringKey: StringKeys.DETECTION_OF_PROBLEMS,
     descriptionStringKey:
       StringKeys.EARLY_DETECTION_OF_PROBLEMS_AND_PREVENTION_OF_POSSIBLE_LOSSES_AND_PENALTIES,
-    image: "/images/feature-team.png",
   },
-  {
+  "feature-user.png": {
     titleStringKey: StringKeys.IDENTIFY_PROBLEMS_AFTER_TREATMENT,
     descriptionStringKey:
       StringKeys.IDENTIFY_AND_RESOLVE_PROBLEMS_QUICKLY_THAT_MAY_ARISE_FOR_THE_PATIENT_AFTER_TREATMENT,
-    image: "/images/feature-user.png",
   },
-]
+}
+
+const getFeatureImages = graphql`
+  query GET_FEATURE_IMAGES {
+    allFile(
+      filter: {
+        relativePath: {
+          in: [
+            "feature-event.png"
+            "feature-board.png"
+            "feature-news.png"
+            "feature-team.png"
+            "feature-user.png"
+          ]
+        }
+      }
+    ) {
+      edges {
+        node {
+          relativePath
+          base
+          childImageSharp {
+            fluid {
+              base64
+              src
+              srcSet
+              sizes
+              aspectRatio
+            }
+          }
+        }
+      }
+    }
+  }
+`
 
 const FeaturesSection = () => {
   const { t } = useTranslation()
+  const { allFile } = useStaticQuery<Get_Feature_ImagesQuery>(getFeatureImages)
   return (
     <section css={tw`container mx-auto px-6 p-10`}>
       <h2
@@ -48,31 +81,32 @@ const FeaturesSection = () => {
       >
         {t(StringKeys.FEATURES)}
       </h2>
-      {features.map((feature, index) => (
-        <div
-          key={feature.titleStringKey}
-          //TODO handle data-sal for ltr direction by reversing condition
-          data-sal={index % 2 === 0 ? "slide-right" : "slide-left"}
-          data-sal-delay="200"
-          data-sal-easing="ease"
-          css={tw`flex items-center flex-wrap mb-20`}
-        >
+      {allFile.edges.map(({ node }, index) => (
+        <div key={node.base} css={tw`flex items-center flex-wrap mb-20`}>
           {index % 2 === 0 ? (
             <div css={tw`w-full md:w-1/2`}>
-              <img src={feature.image} alt={t(feature.titleStringKey)} />
+              <Img
+                // @ts-ignore
+                fluid={node.childImageSharp!.fluid}
+                alt={t(features[node.base].titleStringKey)}
+              />
             </div>
           ) : null}
           <div css={tw`w-full md:w-1/2`}>
             <h4 css={tw`text-3xl text-gray-800 font-bold mb-3`}>
-              {t(feature.titleStringKey)}
+              {t(features[node.base].titleStringKey)}
             </h4>
             <p css={tw`text-gray-600 mb-8`}>
-              {t(feature.descriptionStringKey)}
+              {t(features[node.base].descriptionStringKey)}
             </p>
           </div>
           {index % 2 === 0 ? null : (
             <div css={tw`w-full md:w-1/2`}>
-              <img src={feature.image} alt={t(feature.titleStringKey)} />
+              <Img
+                // @ts-ignore
+                fluid={node.childImageSharp!.fluid}
+                alt={t(features[node.base].titleStringKey)}
+              />
             </div>
           )}
         </div>
