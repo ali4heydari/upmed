@@ -1,7 +1,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { Helmet } from "react-helmet"
-import { useStaticQuery, graphql } from "gatsby"
+import { graphql, useStaticQuery } from "gatsby"
 import { useTranslation } from "react-i18next"
 import { Languages, StringKeys } from "../utils/enums"
 
@@ -33,13 +33,6 @@ function SEO({ description, lang, meta, title }) {
       }}
       title={title}
       titleTemplate={`%s | ${t(StringKeys.WEBSITE_NAME)}`}
-      link={[
-        {
-          href: "http://cdn.font-store.ir/behdad.css",
-          rel: "stylesheet",
-          type: "text/css",
-        },
-      ]}
       meta={[
         {
           name: `description`,
