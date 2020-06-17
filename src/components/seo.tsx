@@ -33,13 +33,6 @@ function SEO({ description, lang, meta, title }) {
       }}
       title={title}
       titleTemplate={`%s | ${t(StringKeys.WEBSITE_NAME)}`}
-      link={[
-        {
-          href: "https://cdn.font-store.ir/behdad.css",
-          rel: "stylesheet",
-          type: "text/css",
-        },
-      ]}
       meta={[
         {
           name: `description`,
