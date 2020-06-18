@@ -18,7 +18,6 @@ const getHeroImage = graphql`
           src
           srcSet
           sizes
-          tracedSVG
           aspectRatio
         }
       }
