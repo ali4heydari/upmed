@@ -1,9 +1,9 @@
 module.exports = {
-  pathPrefix: `/front/landing-page`,
+  pathPrefix: `/landing-page`,
   siteMetadata: {
-    title: `HiStaff`,
-    description: `Make your Staff and Workspace Happy`,
-    author: `@mostafasoufi`,
+    title: `HooshPardaz`,
+    description: `HooshPardaz Group`,
+    author: `@alir3zafa`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
