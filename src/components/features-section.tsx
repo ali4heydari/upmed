@@ -7,27 +7,27 @@ import { Get_Feature_ImagesQuery } from "../../graphql-types"
 import Img from "gatsby-image"
 
 const features = {
-  "feature-event.png": {
+  "analysis.jpg": {
     titleStringKey: StringKeys.MEASUREMENT_OF_TREATMENT_OUTPUT,
     descriptionStringKey:
       StringKeys.ABILITY_TO_MEASURE_THE_OUTPUT_OF_TREATMENT_AND_PATIENT_SATISFACTION_IN_QUANTITATIVE_AND_STATISTICAL_TERMS,
   },
-  "feature-board.png": {
+  "dashboard.jpg": {
     titleStringKey: StringKeys.ANALYTICAL_DASHBOARDS,
     descriptionStringKey:
       StringKeys.ACCESS_TO_ANALYTICAL_DASHBOARDS_AND_DATA_TO_MEASURE_THE_QUALITY_OF_TREATMENT_AND_THE_PERFORMANCE_OF_THE_TREATMENT_TEAM,
   },
-  "feature-news.png": {
+  "understand.jpg": {
     titleStringKey: StringKeys.BETTER_UNDERSTAND_YOUR_SITUATION,
     descriptionStringKey:
       StringKeys.BETTER_UNDERSTAND_YOUR_SITUATION_AND_GET_THE_NECESSARY_INFORMATION_AND_KNOWLEDGE_ABOUT_THE_DISEASE_AND_TREATMENT,
   },
-  "feature-team.png": {
+  "clock.jpg": {
     titleStringKey: StringKeys.DETECTION_OF_PROBLEMS,
     descriptionStringKey:
       StringKeys.EARLY_DETECTION_OF_PROBLEMS_AND_PREVENTION_OF_POSSIBLE_LOSSES_AND_PENALTIES,
   },
-  "feature-user.png": {
+  "follow.jpg": {
     titleStringKey: StringKeys.IDENTIFY_PROBLEMS_AFTER_TREATMENT,
     descriptionStringKey:
       StringKeys.IDENTIFY_AND_RESOLVE_PROBLEMS_QUICKLY_THAT_MAY_ARISE_FOR_THE_PATIENT_AFTER_TREATMENT,
@@ -40,11 +40,11 @@ const getFeatureImages = graphql`
       filter: {
         relativePath: {
           in: [
-            "feature-event.png"
-            "feature-board.png"
-            "feature-news.png"
-            "feature-team.png"
-            "feature-user.png"
+            "analysis.jpg"
+            "dashboard.jpg"
+            "understand.jpg"
+            "clock.jpg"
+            "follow.jpg"
           ]
         }
       }
@@ -84,7 +84,7 @@ const FeaturesSection = () => {
       {allFile.edges.map(({ node }, index) => (
         <div key={node.base} css={tw`flex items-center flex-wrap mb-20`}>
           {index % 2 === 0 ? (
-            <div css={tw`w-full md:w-1/2`}>
+            <div css={tw`w-full md:w-1/2 md:pr-10`}>
               <Img
                 // @ts-ignore
                 fluid={node.childImageSharp!.fluid}
