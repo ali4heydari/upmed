@@ -2,9 +2,9 @@ import tw from "twin.macro"
 import Img from "gatsby-image"
 import React from "react"
 import { graphql, useStaticQuery } from "gatsby"
+import { useTranslation } from "react-i18next"
 import { Get_Contributors_ImagesQuery } from "../../graphql-types"
 import { StringKeys } from "../utils/enums"
-import { useTranslation } from "react-i18next"
 
 const contributors = {
   "mahdiye-soleymani.jpg": {
@@ -25,11 +25,17 @@ const contributors = {
     jobDepartmentStringKey: StringKeys.SINA_HOSPITAL,
     roleStringKey: StringKeys.TEAM_ADVISER,
   },
-  "zahra-shajari.png": {
+  "zahra-shajari.jpg": {
     nameStringKey: StringKeys.ZAHRA_SHAJARI,
     jobStringKey: StringKeys.DOCTOR,
     jobDepartmentStringKey: StringKeys.SINA_HOSPITAL,
     roleStringKey: StringKeys.TEAM_ADVISER,
+  },
+  "hamid-behroozi.jpg": {
+    nameStringKey: StringKeys.HAMID_BEHROOZI,
+    jobStringKey: StringKeys.ASSISTANT_PROFESSOR,
+    jobDepartmentStringKey: StringKeys.SHARIF_UNIVERSITY,
+    roleStringKey: StringKeys.TEAM_SUPERVISOR,
   },
 }
 
@@ -42,7 +48,8 @@ const getContributorsImages = graphql`
             "contributors/mahdiye-soleymani.jpg"
             "contributors/abbas-soleymani.png"
             "contributors/hale-ashraf.jpg"
-            "contributors/zahra-shajari.png"
+            "contributors/zahra-shajari.jpg"
+            "contributors/hamid-behroozi.jpg"
           ]
         }
       }

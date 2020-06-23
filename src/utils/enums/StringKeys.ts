@@ -63,4 +63,5 @@ export enum StringKeys {
   MARKETER = "marketer",
   APPRECIATION = "appreciation",
   APPRECIATION_TEXT = "appreciation_text",
+  HAMID_BEHROOZI = "hamid_behroozi"
 }
