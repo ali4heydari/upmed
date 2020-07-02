@@ -63,5 +63,7 @@ export enum StringKeys {
   MARKETER = "marketer",
   APPRECIATION = "appreciation",
   APPRECIATION_TEXT = "appreciation_text",
-  HAMID_BEHROOZI = "hamid_behroozi"
+  HAMID_BEHROOZI = "hamid_behroozi",
+  CARDIOLOGIST = "cardiologist",
+  FELLOWSHIP_INTERVENTION = "fellowship_intervention",
 }

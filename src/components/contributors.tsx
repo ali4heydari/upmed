@@ -9,31 +9,34 @@ import { StringKeys } from "../utils/enums"
 const contributors = {
   "mahdiye-soleymani.jpg": {
     nameStringKey: StringKeys.MAHDIYE_SOLEYMADI,
-    jobStringKey: StringKeys.ASSISTANT_PROFESSOR,
+    jobStringKeys: [StringKeys.ASSISTANT_PROFESSOR],
     jobDepartmentStringKey: StringKeys.SHARIF_UNIVERSITY,
     roleStringKey: StringKeys.TEAM_SUPERVISOR,
   },
   "abbas-soleymani.png": {
     nameStringKey: StringKeys.ABBAS_SOLEYMANI,
-    jobStringKey: StringKeys.DOCTOR,
+    jobStringKeys: [
+      StringKeys.CARDIOLOGIST,
+      StringKeys.FELLOWSHIP_INTERVENTION,
+    ],
     jobDepartmentStringKey: StringKeys.SINA_HOSPITAL,
     roleStringKey: StringKeys.TEAM_ADVISER,
   },
   "hale-ashraf.jpg": {
     nameStringKey: StringKeys.HALE_ASHRAF,
-    jobStringKey: StringKeys.DOCTOR,
+    jobStringKeys: [StringKeys.CARDIOLOGIST],
     jobDepartmentStringKey: StringKeys.SINA_HOSPITAL,
     roleStringKey: StringKeys.TEAM_ADVISER,
   },
   "zahra-shajari.jpg": {
     nameStringKey: StringKeys.ZAHRA_SHAJARI,
-    jobStringKey: StringKeys.DOCTOR,
+    jobStringKeys: [StringKeys.CARDIOLOGIST],
     jobDepartmentStringKey: StringKeys.SINA_HOSPITAL,
     roleStringKey: StringKeys.TEAM_ADVISER,
   },
   "hamid-behroozi.jpg": {
     nameStringKey: StringKeys.HAMID_BEHROOZI,
-    jobStringKey: StringKeys.ASSISTANT_PROFESSOR,
+    jobStringKeys: [StringKeys.ASSISTANT_PROFESSOR],
     jobDepartmentStringKey: StringKeys.SHARIF_UNIVERSITY,
     roleStringKey: StringKeys.TEAM_SUPERVISOR,
   },
@@ -109,7 +112,9 @@ export function Contributors() {
                     {t(contributors[node.base].nameStringKey)}
                   </h2>
                   <h3 css={tw`text-gray-500`}>
-                    {t(contributors[node.base].jobStringKey)}
+                    {contributors[node.base].jobStringKeys
+                      .map(jobStringKeys => t(jobStringKeys))
+                      .join(" - ")}
                   </h3>
                   <h3 css={tw`text-gray-500 mb-3`}>
                     {t(contributors[node.base].jobDepartmentStringKey)}
