@@ -3,6 +3,10 @@ image: node:latest
 # This folder is cached between builds
 # http://docs.gitlab.com/ce/ci/yaml/README.html#cache
 cache:
+  untracked: true
+  key:
+    files:
+      - yarn.lock
   paths:
     - node_modules/
     # Enables git-lab CI caching. Both .cache and public must be cached, otherwise builds will fail.
