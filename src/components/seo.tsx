@@ -39,7 +39,7 @@ function SEO({ description= '', lang = 'fa', meta = [], title }) {
         },
         {
           property: `og:title`,
-          content: title,
+          content: `${title} | ${t(StringKeys.WEBSITE_NAME)}`,
         },
         {
           property: `og:description`,
@@ -59,7 +59,7 @@ function SEO({ description= '', lang = 'fa', meta = [], title }) {
         },
         {
           name: `twitter:title`,
-          content: title,
+          content: `${title} | ${t(StringKeys.WEBSITE_NAME)}`,
         },
         {
           name: `twitter:description`,
