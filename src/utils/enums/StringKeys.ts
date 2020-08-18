@@ -68,4 +68,7 @@ export enum StringKeys {
   HAMID_BEHROOZI = "hamid_behroozi",
   CARDIOLOGIST = "cardiologist",
   FELLOWSHIP_INTERVENTION = "fellowship_intervention",
+  SAREH_ZENDEHROUH = "sareh_zendehrouh",
+  RESIDENT_RESEARCHER = "resident_researcher",
+  IPM = "ipm",
 }

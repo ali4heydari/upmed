@@ -7,13 +7,19 @@ import { Get_Contributors_ImagesQuery } from "../../graphql-types"
 import { StringKeys } from "../utils/enums"
 
 const contributors = {
-  "mahdiye-soleymani.jpg": {
+  "1-mahdiye-soleymani.jpg": {
     nameStringKey: StringKeys.MAHDIYE_SOLEYMADI,
     jobStringKeys: [StringKeys.ASSISTANT_PROFESSOR],
     jobDepartmentStringKey: StringKeys.SHARIF_UNIVERSITY,
     roleStringKey: StringKeys.TEAM_SUPERVISOR,
   },
-  "abbas-soleymani.png": {
+  "2-hale-ashraf.jpg": {
+    nameStringKey: StringKeys.HALE_ASHRAF,
+    jobStringKeys: [StringKeys.CARDIOLOGIST],
+    jobDepartmentStringKey: StringKeys.SINA_HOSPITAL,
+    roleStringKey: StringKeys.TEAM_ADVISER,
+  },
+  "3-abbas-soleymani.png": {
     nameStringKey: StringKeys.ABBAS_SOLEYMANI,
     jobStringKeys: [
       StringKeys.CARDIOLOGIST,
@@ -22,19 +28,19 @@ const contributors = {
     jobDepartmentStringKey: StringKeys.SINA_HOSPITAL,
     roleStringKey: StringKeys.TEAM_ADVISER,
   },
-  "hale-ashraf.jpg": {
-    nameStringKey: StringKeys.HALE_ASHRAF,
-    jobStringKeys: [StringKeys.CARDIOLOGIST],
-    jobDepartmentStringKey: StringKeys.SINA_HOSPITAL,
+  "4-sareh-zendehrouh.jpg": {
+    nameStringKey: StringKeys.SAREH_ZENDEHROUH,
+    jobStringKeys: [StringKeys.RESIDENT_RESEARCHER],
+    jobDepartmentStringKey: StringKeys.IPM,
     roleStringKey: StringKeys.TEAM_ADVISER,
   },
-  "zahra-shajari.jpg": {
+  "5-zahra-shajari.jpg": {
     nameStringKey: StringKeys.ZAHRA_SHAJARI,
     jobStringKeys: [StringKeys.CARDIOLOGIST],
     jobDepartmentStringKey: StringKeys.SINA_HOSPITAL,
     roleStringKey: StringKeys.TEAM_ADVISER,
   },
-  "hamid-behroozi.jpg": {
+  "6-hamid-behroozi.jpg": {
     nameStringKey: StringKeys.HAMID_BEHROOZI,
     jobStringKeys: [StringKeys.ASSISTANT_PROFESSOR],
     jobDepartmentStringKey: StringKeys.SHARIF_UNIVERSITY,
@@ -48,14 +54,16 @@ const getContributorsImages = graphql`
       filter: {
         relativePath: {
           in: [
-            "contributors/mahdiye-soleymani.jpg"
-            "contributors/abbas-soleymani.png"
-            "contributors/hale-ashraf.jpg"
-            "contributors/zahra-shajari.jpg"
-            "contributors/hamid-behroozi.jpg"
+            "contributors/1-mahdiye-soleymani.jpg"
+            "contributors/3-abbas-soleymani.png"
+            "contributors/2-hale-ashraf.jpg"
+            "contributors/4-sareh-zendehrouh.jpg"
+            "contributors/5-zahra-shajari.jpg"
+            "contributors/6-hamid-behroozi.jpg"
           ]
         }
       }
+      sort: { fields: name }
     ) {
       edges {
         node {

@@ -22,7 +22,7 @@ const features = {
     descriptionStringKey:
       StringKeys.BETTER_UNDERSTAND_YOUR_SITUATION_AND_GET_THE_NECESSARY_INFORMATION_AND_KNOWLEDGE_ABOUT_THE_DISEASE_AND_TREATMENT,
   },
-  "clock.jpg": {
+  "1-clock.jpg": {
     titleStringKey: StringKeys.SAVE_DOCTOR_TIME,
     descriptionStringKey:
       StringKeys.SAVE_DOCTOR_TIME_AND_BETTER_AND_MORE_ACCURATE_INFORMATION_TRANSFER_TO_THE_PATIENT,
@@ -43,10 +43,13 @@ const getFeatureImages = graphql`
             "analysis.jpg"
             "dashboard.jpg"
             "understand.jpg"
-            "clock.jpg"
+            "1-clock.jpg"
             "follow.jpg"
           ]
         }
+      }
+      sort: {
+        fields: name
       }
     ) {
       edges {
