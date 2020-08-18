@@ -42,9 +42,9 @@ const contributors = {
   },
   "6-hamid-behroozi.jpg": {
     nameStringKey: StringKeys.HAMID_BEHROOZI,
-    jobStringKeys: [StringKeys.ASSISTANT_PROFESSOR],
+    jobStringKeys: [StringKeys.ASSOCIATE_PROFESSOR],
     jobDepartmentStringKey: StringKeys.SHARIF_UNIVERSITY,
-    roleStringKey: StringKeys.TEAM_SUPERVISOR,
+    roleStringKey: StringKeys.TEAM_ADVISER,
   },
 }
 

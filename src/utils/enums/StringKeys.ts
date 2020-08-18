@@ -54,7 +54,6 @@ export enum StringKeys {
   SEND = "send",
   GET_IN_TOUCH_WITH_US = "get_in_touch_with_us",
   MAHDIYE_SOLEYMADI = "mahdiye_soleymadi",
-  POOYA_KARIMIYAN = "pooya_karimiyan",
   ABBAS_SOLEYMANI = "abbas_soleymani",
   HALE_ASHRAF = "hale_ashraf",
   ZAHRA_SHAJARI = "zahra_shajari",
@@ -72,4 +71,5 @@ export enum StringKeys {
   SAREH_ZENDEHROUH = "sareh_zendehrouh",
   RESIDENT_RESEARCHER = "resident_researcher",
   IPM = "ipm",
+  ASSOCIATE_PROFESSOR = "associate_professor",
 }

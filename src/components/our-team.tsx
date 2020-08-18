@@ -19,10 +19,6 @@ const team = {
     nameStringKey: StringKeys.ALI_HEYDARI,
     roleStringKey: StringKeys.DEVELOPER,
   },
-  "pooya-karimiyan.png": {
-    nameStringKey: StringKeys.POOYA_KARIMIYAN,
-    roleStringKey: StringKeys.MARKETER,
-  },
 }
 
 const getTeamImages = graphql`
@@ -34,7 +30,6 @@ const getTeamImages = graphql`
             "team/alireza-fatemi.jpg"
             "team/siyavash-ganji.jpg"
             "team/ali-heydari.jpg"
-            "team/pooya-karimiyan.png"
           ]
         }
       }
@@ -73,7 +68,7 @@ export function OurTeam() {
               haven't heard of them.
             </p>*/}
         </div>
-        <div css={tw`flex flex-wrap`}>
+        <div css={tw`flex flex-wrap justify-center`}>
           {allFile.edges.map(({ node }, index) => (
             <div
               key={team[node.base].nameStringKey}
