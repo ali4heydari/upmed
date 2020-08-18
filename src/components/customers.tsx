@@ -47,7 +47,7 @@ export function OurCustomers() {
         <h2 css={tw`text-4xl font-bold text-center text-gray-800 mb-8`}>
           {t(StringKeys.OUR_CUSTOMERS)}
         </h2>
-        <div css={tw`flex flex-wrap`}>
+        <div css={tw`flex justify-center`}>
           <div css={tw`sm:w-1/4 p-2`}>
             {customerImages.map(({ node }) => (
               <div
