@@ -1,8 +1,10 @@
+const faTranslations = require("./src/locales/fa/translations.json")
+
 module.exports = {
   pathPrefix: `/landing-page`,
   siteMetadata: {
-    title: `HooshPardaz`,
-    description: `HooshPardaz Group`,
+    title: faTranslations["website_name"],
+    description: faTranslations["website_description"],
     author: `@alir3zafa`,
   },
   plugins: [

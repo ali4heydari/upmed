@@ -21,6 +21,7 @@ export enum StringKeys {
   COPYRIGHT = "copyright",
   ALL_RIGHTS_RESERVED = "all_rights_reserved",
   WEBSITE_NAME = "website_name",
+  WEBSITE_DESCRIPTION = "website_description",
   ABOUT_US = "about_us",
   CONTACT_US = "contact_us",
   TERMS = "terms",
