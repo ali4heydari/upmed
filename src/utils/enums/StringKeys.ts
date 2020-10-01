@@ -72,4 +72,5 @@ export enum StringKeys {
   RESIDENT_RESEARCHER = "resident_researcher",
   IPM = "ipm",
   ASSOCIATE_PROFESSOR = "associate_professor",
+  SCREEN_SHOTS = "screen_shots",
 }

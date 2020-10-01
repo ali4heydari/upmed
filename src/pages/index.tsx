@@ -6,6 +6,7 @@ import { StringKeys } from "../utils/enums"
 import FeaturesSection from "../components/features-section"
 import { OurCustomers } from "../components/customers"
 import { Hero } from "../components/hero"
+import { SlideShow } from "../components/slideshow"
 
 const IndexPage = () => {
   const { t } = useTranslation()
@@ -14,6 +15,7 @@ const IndexPage = () => {
       <SEO title={t(StringKeys.HOME)} />
       <Hero />
       <FeaturesSection />
+      <SlideShow />
       <OurCustomers />
     </Layout>
   )
