@@ -1,7 +1,7 @@
 const faTranslations = require("./src/locales/fa/translations.json")
 
 module.exports = {
-  pathPrefix: `/landing-page`,
+  pathPrefix: `/upmed`,
   siteMetadata: {
     title: faTranslations["website_name"],
     description: faTranslations["website_description"],
