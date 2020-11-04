@@ -11,7 +11,7 @@ export enum StringKeys {
   EARLY_DETECTION_OF_PROBLEMS_AND_PREVENTION_OF_POSSIBLE_LOSSES_AND_PENALTIES = "Early detection of problems and prevention of possible losses and penalties",
   SAVE_DOCTOR_TIME = "save_doctor_time",
   SAVE_DOCTOR_TIME_AND_BETTER_AND_MORE_ACCURATE_INFORMATION_TRANSFER_TO_THE_PATIENT = "save_doctor_time_and_better_and_more_accurate_information_transfer_to_the_patient",
-  GET_STARTED = "get_started",
+  LIVE_DEMO = "live_demo",
   MEASUREMENT_OF_TREATMENT_OUTPUT = "measurement_of_treatment_output",
   ANALYTICAL_DASHBOARDS = "analytical_dashboards",
   BETTER_UNDERSTAND_YOUR_SITUATION = "better_understand_your_situation",

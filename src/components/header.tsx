@@ -78,7 +78,7 @@ const Header = () => {
           >
             <a
               css={tw`inline-flex items-center bg-gray-200 border-0 py-1 px-3 focus:outline-none hover:bg-gray-300 rounded text-base mt-4 md:mt-0`}
-              href={`${Links.TERMS}`}
+              href={"https://sina-front.vercel.app/"}
             >
               <svg
                 fill="none"
@@ -91,7 +91,7 @@ const Header = () => {
               >
                 <path d="M5 12h14M12 5l7 7-7 7" />
               </svg>
-              {t(StringKeys.GET_STARTED)}
+              {t(StringKeys.LIVE_DEMO)}
             </a>
           </div>
         </div>
